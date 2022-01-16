@@ -1,0 +1,43 @@
+.header-menu{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    list-style-type: none;
+    // display: none;
+
+    @media (max-width:1440px) {
+        display: none;
+    }
+
+    &-burger{
+        display: none;
+        color: white;
+
+        &>div{
+            display: flex;
+            align-items: center;
+            margin-right: 0.3rem;
+        }
+
+        @media (max-width:1440px) {
+            display: flex;
+            justify-content:center;
+            align-content: center;
+        }
+    }
+}
+
+header{
+    padding: 1rem 10% 1rem 10%;
+
+    background-color: #000000;
+
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: white;
+
+    @media (max-width:1440px) {
+        padding: 0.7rem 2% 0.7rem 2%;
+    }
+}

@@ -1,0 +1,33 @@
+#brands{
+    @media (max-width:750px) {
+        display: none;
+    }
+
+}
+
+.brands__body{
+    width: 17%;
+    height: 6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width:1440px) {
+        width: 23%;
+        &:nth-child(5){
+            display: none;
+        }
+    }
+
+    @media (max-width:980px) {
+        width: 30%;
+        &:nth-child(4){
+            display: none;
+        }
+    }
+}
+
+.brands__text {
+    font-size: 1vw;
+}

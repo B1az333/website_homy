@@ -1,0 +1,65 @@
+@media (max-width: 750px) {
+  #strengths {
+    display: none;
+  }
+}
+
+.strengths__body {
+  width: 22%;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1440px) {
+  .strengths__body {
+    width: 23%;
+  }
+}
+
+@media (max-width: 980px) {
+  .strengths__body {
+    width: 24%;
+  }
+}
+
+.strengths__image {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* border: 1px solid #000; */
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.strengths__image img {
+  max-width: 55%;
+  max-height: 55%;
+}
+
+#strengths {
+  /* border: 1px solid #000; */
+  border-radius: 1rem;
+  background-color: #E5E5E5;
+}
+
+#strengths > div {
+  padding: 1.5rem 1.5rem 0% 1.5rem;
+}
+
+.strengths__text {
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 5% 15% 5% 15%;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=strengths.css.map */

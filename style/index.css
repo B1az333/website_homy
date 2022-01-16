@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import "/style/styles.css";
+
+@import "/style/header.css";
+
+@import "/style/main-block.css";
+@import "/style/navigation.css";
+@import "/style/news.css";
+@import "/style/products.css";
+@import "/style/brands.css";
+@import "/style/strengths.css";
+@import "/style/reasons.css";
+@import "/style/stats.css";
+@import "/style/work-with-us.css";
+
+@import "/style/footer.css";
