@@ -107,9 +107,6 @@ section > div {
 
 @media (max-width: 1440px) {
   .title__image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -138,9 +135,6 @@ section > div {
 
 @media (max-width: 1440px) {
   .title-slider {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -175,6 +169,7 @@ section > div {
   border-radius: 10rem;
   border: 0.15rem solid #EDEEF2;
   margin-left: 0.25rem;
+  cursor: pointer;
 }
 
 .title-slider__container:hover {
@@ -207,5 +202,9 @@ img {
 
 .block__line_white hr {
   background-color: #ffffff;
+}
+
+.active {
+  display: block;
 }
 /*# sourceMappingURL=styles.css.map */

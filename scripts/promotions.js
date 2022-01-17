@@ -19,7 +19,7 @@ function createNodePromo({img, title,description, time_action}){
           </p>
 
           <figure class="promotions__image">
-            <img src="${img}"
+            <img src="${img ? img: ''}"
                  alt="image">
             <figcaption>${description}</figcaption>
           </figure>

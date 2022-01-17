@@ -227,6 +227,7 @@
 
 .products__slider img {
   max-height: 30%;
+  cursor: pointer;
 }
 
 @media (max-width: 1440px) {

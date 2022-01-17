@@ -9,55 +9,6 @@
   </head>
   <body>
     <header>
-      <ul class="header-menu">
-        <li>
-          <span>
-            Каталог
-          </span>
-          <img src="/img/header-nav.svg" alt="">
-        </li>
-        <li>
-          <span>
-            О компании
-          </span>
-          <img src="/img/header-nav.svg" alt="">
-        </li>
-        <li>
-          <span>
-            Оплата и доставка
-          </span>
-        </li>
-        <li>
-          <span>
-            Гарантии и возврат
-          </span>
-        </li>
-        <li>
-          <span>
-            Сотрудничество
-          </span>
-        </li>
-        <li>
-          <span>
-            Услуги
-          </span>
-        </li>
-        <li>
-          <span>
-            Решения
-          </span>
-        </li>
-        <li>
-          <span>
-            Техподдержка
-          </span>
-        </li>
-        <li>
-          <span>
-            Контакты
-          </span>
-        </li>
-      </ul>
       <div class="header-menu-burger">
         <div>
           <img src="/img/icon-menu.svg" alt="ico">
@@ -66,6 +17,8 @@
           <span>Меню</span>
         </div>
       </div>
+      <ul class="header-menu">
+      </ul>
     </header>
 
     <section id="main-block">
@@ -119,10 +72,10 @@
               </p>
             </div>
           </div>
-          <div class="main-block-search__search">
+          <form class="main-block-search__search">
             <input type="search" name="q" placeholder="Поиск по сайту"> 
             <input type="submit" value="Искать">
-          </div>
+          </form>
         </div>
 
         <div class="main-block-cart">
@@ -158,8 +111,8 @@
               </p>
               <p>
                 <b>
-                  <span id="count-products-in-bucket">4</span> 
-                  <span id="price-products-in-bucket">/ 4000р.</span> 
+                  <span id="count-products-in-bucket"></span> 
+                  <span id="price-products-in-bucket"></span> 
                 </b>
               </p>
             </div>
@@ -168,11 +121,11 @@
           <div class="main-block-cart-favorites">
             <div>
               <img src="/img/main-heart.svg" alt="">
-              <b>Избранное <span>7</span></b> 
+              <b>Избранное <span>0</span></b> 
             </div>
             <div>
               <img src="/img/main-refresh.svg" alt="">
-              <b>Сравнение <span>7</span></b> 
+              <b>Сравнение <span>0</span></b> 
             </div>
           </div>
         </div>
@@ -181,16 +134,8 @@
 
     <nav id="navigation">
       <ul class="navigation__container">
-        <li>VoIP оборудование</li>
-        <li>Skype оборудование</li>
-        <li>GSM оборудование</li>
-        <li>Видео-оборудование</li>
-        <li>Радио и DECT телефоны</li>
-        <li>Гарнитуры</li>
-        <li>Электронные замки</li>
-        <li>Домофонные системы</li>
-        <li>Системы записи телефонных разговоров</li>
-        <li>Сетевое оборудование</li>
+        <li class="navigation-strike"><img src="/img/nav-strike.svg" alt="icon"></li>
+
         <li class="navigation-strike"><img src="/img/nav-strike.svg" alt="icon"></li>
       </ul>
     </nav>
@@ -199,65 +144,11 @@
       <div class="company-news">
         <h2>Новости компании</h2>
         <hr class="hr__line hr__line_solid">
-        <div class="company-news__container">
-          <div class="company-news__body">
-            <div>
-              <img src="/img/new-photo.svg" alt="">
-            </div>
-            <figure>
-              <div class="company-news__frontground-image">
-                <span>15</span>
-              </div>
-              <figcaption>
-                октября
-              </figcaption>
-            </figure>
-          </div>
-          <div class="company-news__text">
-            <p>Новинка от “Элтекс” - точка доступа WEP-2ac</p>
-            <p>Предприятие «Элтекс» запустило производство точки доступа WEP-2ac.</p>
-          </div>
-        </div>
+        <div class="company-news__container"></div>
         <hr class="hr__line">
-        <div class="company-news__container">
-          <div class="company-news__body">
-            <div>
-              <img src="/img/new-photo.svg" alt="">
-            </div>
-            <figure>
-              <div class="company-news__frontground-image">
-                <span>07</span>
-              </div>
-              <figcaption>
-                октября
-              </figcaption>
-            </figure>
-          </div>
-          <div class="company-news__text">
-            <p>Новинка от компании Grandstream!</p>
-            <p>Скоро в продаже мощный маршрутизатор GWN7000!</p>
-          </div>
-        </div>
+        <div class="company-news__container"></div>
         <hr class="hr__line">
-        <div class="company-news__container">
-          <div class="company-news__body">
-            <div>
-              <img src="/img/new-photo.svg" alt="">
-            </div>
-            <figure>
-              <div class="company-news__frontground-image">
-                <span>28</span>
-              </div>
-              <figcaption>
-                октября
-              </figcaption>
-            </figure>
-          </div>
-          <div class="company-news__text">
-            <p>WiFi точка доступа от компании Grandstream!</p>
-            <p>Уже скоро в продаже!</p>
-          </div>
-        </div>
+        <div class="company-news__container"></div>
         <div class="company-news__link"><a href="#">Все новости</a></div>
       </div>
 
@@ -266,39 +157,20 @@
           <span><i>Более 2000 товаров от 40+ производителей в одном магазине.</i> Любые решения под ключ</span>
         </div>
         <div class="banner-slider">
-          <div class="banner-slider__image">
-            <img src="/img/banner-photo.svg" alt="banner-photo">
-          </div>
+          <div class="banner-slider__image"></div>
 
           <div class="banner-slider-inside">
             <div class="banner-slider-inside__container">
-              <div class="banner-slider-inside__strike"><img src="/img/banner-strike-left.svg" alt="ico"></div>
-              <div class="banner-slider-inside__body">
-                <div class="banner-slider-inside__title">
-                  <p>Революционное решение</p>
-                  <p>На рынке среди систем ВКС!</p>
-                  <p><i>GVC 3200 от компаний grandstream это:</i></p>
-                </div>
-                <div>
-                  <ul>
-                    <li>9-ти сторонняя аудио/видео конференция без покупки дополнительного ПО</li>
-                    <li>2 Мпикс камера CMOS с разрешением 1920Hx1080V@15fps</li>
-                    <li>Гигабитный порт, встроенный модуль WiFi (802.11п) и Bluetooth 4.0, Miracast </li>
-                  </ul>
-                </div>
-                <div class="banner-slider-inside__button">
-                  Подробнее
-                </div>
+              <div class="banner-slider-inside__strike">
+                <div><img src="/img/banner-strike-left.svg" alt="ico"></div>
+                <div><img src="/img/banner-strike-right.svg" alt="ico"></div>
               </div>
-              <div class="banner-slider-inside__strike"><img src="/img/banner-strike-right.svg" alt="ico"></div>
+
+              <div class="banner-slider-inside__button">
+                Подробнее
+              </div>
             </div>
-            <div class="banner-slider-inside__track">
-              <div class="banner-slider-inside__track_active"></div>
-              <div class="banner-slider-inside__track_not-active"></div>
-              <div class="banner-slider-inside__track_not-active"></div>
-              <div class="banner-slider-inside__track_not-active"></div>
-              <div class="banner-slider-inside__track_not-active"></div>
-            </div>
+            <div class="banner-slider-inside__track"></div>
           </div>
         </div>
       </div>
@@ -385,194 +257,7 @@
         </div>
       </div>
       
-      <div class="products__container">
-        
-        <!-- <div class="promotions__body products__body_line">
-          <p class="promotions-name">
-            <a class="promotions-name__text" href="#">Название акции</a>
-          </p>
-
-          <figure class="promotions__image">
-            <img src="/img/promotion_image1.svg"
-                 alt="promotion">
-            <figcaption>Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.</figcaption>
-          </figure>
-
-          <div class="promotions-validity__container">
-            <div class="promotions-validity__text">
-              <span>Срок действия:</span>
-            </div>
-
-            <div class="promotions-timer">
-              <div class="promotions-timer__container">
-                <div class="promotions-timer__body">
-                  <div class="promotions-timer__block">0</div>
-                  <div class="promotions-timer__block">0</div>
-                </div>
-                <div class="promotions-timer__info">дней</div>
-              </div>
-
-              <div class="promotions-timer__separator">:</div>
-
-
-              <div class="promotions-timer__container">
-                <div class="promotions-timer__body">
-                  <div class="promotions-timer__block">0</div>
-                  <div class="promotions-timer__block">0</div>
-                </div>
-                <div class="promotions-timer__info">часов</div>
-              </div>
-
-              <div class="promotions-timer__separator">:</div>
-
-              <div class="promotions-timer__container">
-                <div class="promotions-timer__body">
-                  <div class="promotions-timer__block">0</div>
-                  <div class="promotions-timer__block">0</div>
-                </div>
-                <div class="promotions-timer__info">минут</div>
-              </div>
-            </div>
-          </div>
-
-          <p class="promotions-link">
-            <a class="promotions-link__text" href="#">Подробнее</a>
-          </p>
-        </div>
-
-        <div class="promotions__body products__body_line">
-          <p class="promotions-name">
-            <a class="promotions-name__text" href="#">Название акции</a>
-          </p>
-
-          <figure class="promotions__image">
-            <img src="/img/promotion_image2.svg"
-                 alt="promotion">
-            <figcaption>Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.</figcaption>
-          </figure>
-
-          <div class="promotions-validity__container">
-            <div class="promotions-validity__text">
-              <span>Срок действия:</span>
-            </div>
-
-            <div class="promotions-timer_indefinitely">
-              <span>Бессрочно</span>
-            </div>
-          </div>
-
-          <p class="promotions-link">
-            <a class="promotions-link__text" href="#">Подробнее</a>
-          </p>
-        </div>
-
-        <div class="promotions__body products__body_line">
-          <p class="promotions-name">
-            <a class="promotions-name__text" href="#">Название акции</a>
-          </p>
-
-          <figure class="promotions__image">
-            <img src="/img/promotion_image3.svg"
-                 alt="promotion">
-            <figcaption>Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.</figcaption>
-          </figure>
-
-          <div class="promotions-validity__container">
-            <div class="promotions-validity__text">
-              <span>Срок действия:</span>
-            </div>
-
-            <div class="promotions-timer">
-              <div class="promotions-timer__container">
-                <div class="promotions-timer__body">
-                  <div class="promotions-timer__block">0</div>
-                  <div class="promotions-timer__block">0</div>
-                </div>
-                <div class="promotions-timer__info">дней</div>
-              </div>
-
-              <div class="promotions-timer__separator">:</div>
-
-
-              <div class="promotions-timer__container">
-                <div class="promotions-timer__body">
-                  <div class="promotions-timer__block">0</div>
-                  <div class="promotions-timer__block">0</div>
-                </div>
-                <div class="promotions-timer__info">часов</div>
-              </div>
-
-              <div class="promotions-timer__separator">:</div>
-
-              <div class="promotions-timer__container">
-                <div class="promotions-timer__body">
-                  <div class="promotions-timer__block">0</div>
-                  <div class="promotions-timer__block">0</div>
-                </div>
-                <div class="promotions-timer__info">минут</div>
-              </div>
-            </div>
-          </div>
-
-          <p class="promotions-link">
-            <a class="promotions-link__text" href="#">Подробнее</a>
-          </p>
-        </div>
-
-        <div class="promotions__body products__body_line">
-          <p class="promotions-name">
-            <a class="promotions-name__text" href="#">Название акции</a>
-          </p>
-
-          <figure class="promotions__image">
-            <img src="/img/promotion_image4.svg"
-                 alt="promotion">
-            <figcaption>Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.</figcaption>
-          </figure>
-
-          <div class="promotions-validity__container">
-            <div class="promotions-validity__text">
-              <span>Срок действия:</span>
-            </div>
-
-            <div class="promotions-timer">
-              <div class="promotions-timer__container">
-                <div class="promotions-timer__body">
-                  <div class="promotions-timer__block">0</div>
-                  <div class="promotions-timer__block">0</div>
-                </div>
-                <div class="promotions-timer__info">дней</div>
-              </div>
-
-              <div class="promotions-timer__separator">:</div>
-
-
-              <div class="promotions-timer__container">
-                <div class="promotions-timer__body">
-                  <div class="promotions-timer__block">0</div>
-                  <div class="promotions-timer__block">0</div>
-                </div>
-                <div class="promotions-timer__info">часов</div>
-              </div>
-
-              <div class="promotions-timer__separator">:</div>
-
-              <div class="promotions-timer__container">
-                <div class="promotions-timer__body">
-                  <div class="promotions-timer__block">0</div>
-                  <div class="promotions-timer__block">0</div>
-                </div>
-                <div class="promotions-timer__info">минут</div>
-              </div>
-            </div>
-          </div>
-
-          <p class="promotions-link">
-            <a class="promotions-link__text" href="#">Подробнее</a>
-          </p>
-        </div> -->
-
-      </div>
+      <div class="products__container"></div>
     </section>
 
     <section id="buy-now">
@@ -581,49 +266,16 @@
         <div class="block__line"><hr></div>
       </div>
       
-      <div class="buy-now__container">
-        <!-- <figure class="products__image">
-          <img src="/img/now_samsung.png"
-               alt="samsung">
-          <figcaption class="products__text"><a href="#">Замок дверной Samsung SHS-2320 XMK/EN</a></figcaption>
-        </figure>
-
-        <figure class="products__image">
-          <img src="/img/now_voxstack.png"
-               alt="voxstack">
-          <figcaption class="products__text"><a href="#">GSM-VoIP шлюз OpenVox VoxStack VS-GW2120-4G</a></figcaption>
-        </figure>
-
-        <figure class="products__image">
-          <img src="/img/now_grandstream.png"
-               alt="grandstream">
-          <figcaption class="products__text"><a href="#">IP телефон Grandstream GXP2130</a></figcaption>
-        </figure>
-
-        <figure class="products__image">
-          <img src="/img/now_rome.png"
-               alt="rome">
-          <figcaption class="products__text"><a href="#">GSM телефон BQD–2051 Rome</a></figcaption>
-        </figure> -->
-      </div>
+      <div class="buy-now__container"></div>
     </section>
 
     <section id="brands">
       <div class="title__container">
         <div><h2 class="title">Наши ключевые бренды</h2></div>
-        <div class="title__image">
-          <img src="/img/large-ico-slider-right.svg" alt="ico">
-        </div>
+  
         <div class="block__line"><hr></div>
         <div><a href="#" class="title__text">Все бренды</a></div>
-        <div class="title-slider">
-          <div class="title-slider__container">
-            <img src="/img/products-slider-triangle-left.svg" alt="">
-          </div>
-          <div class="title-slider__container">
-            <img src="/img/products-slider-triangle-right.svg" alt="">
-          </div>
-        </div>
+        
       </div>
       <div>
         <div class="brands__body">
@@ -935,8 +587,12 @@
       </div>
     </footer>
 
+    <script type="module" src="scripts/header.js"></script>
+    <script type="module" src="scripts/banner.js"></script>
     <script type="module" src="scripts/buying-right-now.js"></script>
     <script type="module" src="scripts/promotions.js"></script>
     <script type="module" src="scripts/products.js"></script>
+    <script type="module" src="scripts/news.js"></script>
+    <script type="module" src="scripts/navigation.js"></script>
   </body>
 </html>

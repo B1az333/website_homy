@@ -679,6 +679,7 @@
 
 .main-block-cart-favorites > div {
   border-bottom: 0.18rem dashed #6B8DBB;
+  width: 40%;
 }
 
 .main-block-cart-favorites > div img {
