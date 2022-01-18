@@ -1,10 +1,22 @@
 import {NEWS} from './config.js';
 
-const newContainer = document.querySelectorAll('.company-news__container');
+createNews(NEWS);
 
-randomNewItems(NEWS).forEach((item, index)=> {
-    newContainer[index].insertAdjacentHTML("beforeend", createNodeProduct(item));
-})
+function createNews(items) {
+    const newContainer = document.querySelectorAll('.company-news__container');
+
+
+    if(items.length === 0) {
+        displayNone(newContainer[0].parentElement);
+
+        const sectionBanner = document.querySelector('.banner').parentElement;
+        sectionBanner.style.justifyContent='center';
+    }
+
+    randomNewItems(items).forEach((item, index)=> {
+        newContainer[index].insertAdjacentHTML("beforeend", createNodeProduct(item));
+    })
+}
 
 function randomNewItems(items){
     const randomNum = randomInteger(0, items.length-3);
@@ -57,4 +69,8 @@ function monthRusName(number){
         case 10: return 'ноября';
         case 11: return 'декабря';
     }
+}
+
+function displayNone(...rest) {
+    rest.forEach(item => item.style.display = 'none');
 }

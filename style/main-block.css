@@ -408,6 +408,7 @@
 
 .main-block-search__search > input:nth-child(2) {
   width: 28%;
+  cursor: pointer;
   background-color: #FF5716;
   color: white;
   border-radius: 0.3rem;
@@ -476,6 +477,7 @@
 
 .main-block-cart__image {
   display: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1440px) {

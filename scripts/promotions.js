@@ -3,11 +3,19 @@ import findProductsContainer from './products.js'
 
 const SECTION_NAME_PROMO = 'promotions';
 
-const promoContainer = findProductsContainer(SECTION_NAME_PROMO);
+createPromotions(PROMOTIONS);
 
-PROMOTIONS.forEach(item => {
-    promoContainer.insertAdjacentHTML("beforeend", createNodePromo(item));
-});
+function createPromotions(items) {
+    const promoContainer = findProductsContainer(SECTION_NAME_PROMO);
+
+    if(items.length === 0) displayNone(promoContainer.parentElement);
+
+    items.forEach((item) => {
+        promoContainer.insertAdjacentHTML('beforeend', createNodePromo(item));
+    });
+}
+
+
 
 function createNodePromo({img, title,description, time_action}){
     const {days, hours, minutes} = time_action ? timerDataConversion(time_action) : {days:0, hours:0, minutes:0};
@@ -78,4 +86,8 @@ function timerDataConversion(data){
   const minutes = Number(data[2]);
 
   return {days, hours, minutes};
+}
+
+function displayNone(...rest) {
+    rest.forEach(item => item.style.display = 'none');
 }

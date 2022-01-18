@@ -56,12 +56,14 @@ SALE_ITEMS = SALE_ITEMS.sort((itemX, itemY) => {
     return 0;
 });
 
-createNodeProducts(SECTION_NAME_NEW, NEW_ITEMS);
-createNodeProducts(SECTION_NAME_RECOMMENDED, RECOMMENDED_ITEMS);
-createNodeProducts(SECTION_NAME_SALE, SALE_ITEMS);
+createProducts(SECTION_NAME_NEW, NEW_ITEMS);
+createProducts(SECTION_NAME_RECOMMENDED, RECOMMENDED_ITEMS);
+createProducts(SECTION_NAME_SALE, SALE_ITEMS);
 
-function createNodeProducts(sectionName, items) {
+function createProducts(sectionName, items) {
     const productContainer = findProductsContainer(sectionName);
+
+    if(items.length === 0) displayNone(productContainer.parentElement);//
 
     const outputProducts = items.length > 4 ? items.slice(0, 4) : items;
 
@@ -157,7 +159,7 @@ function createSliderIco(direction, items, sectionContainer, moveSlider) {
         `<img src="/img/large-ico-slider-${direction}.svg" alt="${direction}-ico">`,
     );
 
-    if (items.length <= 4) divSlider.style.display = 'none';
+    if (items.length <= 4) displayNone(divSlider);
 
     if (direction === 'left') {
         divSlider.addEventListener('click', () => {
@@ -253,13 +255,22 @@ function mediaQueryListener(media, ...rest) {
 
     const windowInnerWidth = window.innerWidth;
 
-    if (windowInnerWidth < media) rest.forEach((item) => (item.style.display = 'flex'));
-    else rest.forEach((item) => (item.style.display = 'none'));
+    if (windowInnerWidth < media)  displayFlex(...rest);
+    else displayNone(...rest);
 
-    mediaQuery.addListener((media) => {
-        if (media.matches) rest.forEach((item) => (item.style.display = 'flex'));
-        else rest.forEach((item) => (item.style.display = 'none'));
+    mediaQuery.addEventListener("change", (media) => {
+        if (media.matches) displayFlex(...rest);
+        else displayNone(...rest);
     });
+}
+
+function displayFlex(...rest) {
+    rest.forEach(item => item.style.display = 'flex');
+}
+
+
+function displayNone(...rest) {
+    rest.forEach(item => item.style.display = 'none');
 }
 
 export default function findProductsContainer(sectionId){

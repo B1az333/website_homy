@@ -304,6 +304,7 @@
 
             &:nth-child(2){
                 width: 28%;
+                cursor: pointer;
                 background-color: #FF5716;
                 color: white;
                 border-radius: 0.3rem;
@@ -353,6 +354,8 @@
 
     &__image{
         display: none;
+
+        cursor: pointer;
 
         @media (max-width:1440px) {
             display: flex;

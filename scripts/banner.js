@@ -4,12 +4,22 @@ import {BANNER} from './config.js';
 createCaruselSlider(BANNER);
 
 function createCaruselSlider(items){
+    if(items.length === 0){
+        const banner = document.querySelector('.banner');
+        displayNone(banner);
+
+        const news = document.querySelector('.company-news');
+        news.style.width = '100%';
+    }
+
     createBanner(items);
 
     const currentSlide = caruselNumberSlide(items);
 
     const leftIcoSlide = document.querySelector('.banner-slider-inside__strike').children[0].children[0];
     const rightIcoSlide = document.querySelector('.banner-slider-inside__strike').children[1].children[0];
+
+    if(items.length < 2) displayNone(leftIcoSlide, rightIcoSlide);
 
     leftIcoSlide.addEventListener('click', () => {
         installSlide(currentSlide('left'));
@@ -61,6 +71,8 @@ function setActiveTracker(number){
 function createBanner(items){
     const imgBanner = document.querySelector('.banner-slider__image');
     const trackBanner = document.querySelector('.banner-slider-inside__track');
+
+    if(items.length < 2) displayNone(trackBanner);
     
     items.forEach((item, index) => {
         imgBanner.insertAdjacentHTML('beforeend', createImgBanner(item));
@@ -90,4 +102,8 @@ function caruselNumberSlide(items){
         }
         return numberSlide;
     }
+}
+
+function displayNone(...rest) {
+    rest.forEach(item => item.style.display = 'none');
 }
