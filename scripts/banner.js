@@ -1,5 +1,6 @@
 import {BANNER} from './config.js';
 
+const sliderSwitchTime = 7; // seconds
 
 createCaruselSlider(BANNER);
 
@@ -31,14 +32,14 @@ function createCaruselSlider(items){
     })
 
     const sliderContainer = document.querySelector('.banner-slider');
-    let timerId = setInterval(() => installSlide(currentSlide('right')), 7000);
+    let timerId = setInterval(() => installSlide(currentSlide('right')), sliderSwitchTime * 1000);
 
     sliderContainer.onmouseover = () => {
         clearInterval(timerId);
     };
 
     sliderContainer.onmouseout = () => {
-        timerId = setInterval(() => installSlide(currentSlide('right')), 7000);
+        timerId = setInterval(() => installSlide(currentSlide('right')), sliderSwitchTime * 1000);
     };
 
     

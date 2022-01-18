@@ -1,19 +1,28 @@
 import {TOP_MENU} from './config.js';
 
-const headerMenu = document.querySelector('.header-menu');
+createHeaderMenu(TOP_MENU);
 
-for(let item in TOP_MENU){
-    headerMenu.append(createHeaderLi(TOP_MENU[item]))
+function createHeaderMenu(items){
+    const headerMenu = document.querySelector('.header-menu');
+
+    for(let item in items){
+        headerMenu.append(createHeaderLi(items[item]))
+    }
+
+    document.querySelector('.header-menu-burger').children[1].addEventListener('click', () => {
+        headerMenu.style.display = (headerMenu.style.display === 'block') ? 'none' : 'block';
+    });
+    document.querySelector('.header-menu-burger').children[0].addEventListener('click', () => {
+        headerMenu.style.display = (headerMenu.style.display === 'block') ? 'none' : 'block';
+    });
+
+    const mediaQuery = window.matchMedia(`(max-width:1440px)`);
+
+    mediaQuery.addEventListener("change", (media) => {
+        if (media.matches) displayNone(headerMenu);
+        else displayFlex(headerMenu);
+    });
 }
-
-
-const burgerMenu = document.querySelector('.header-menu');
-document.querySelector('.header-menu-burger').children[1].addEventListener('click', () => {
-    burgerMenu.style.display = (burgerMenu.style.display === 'block') ? 'none' : 'block';
-});
-document.querySelector('.header-menu-burger').children[0].addEventListener('click', () => {
-    burgerMenu.style.display = (burgerMenu.style.display === 'block') ? 'none' : 'block';
-});
 
 
 function createHeaderLi({title, submenu}){
@@ -62,3 +71,28 @@ function createHeaderSubLi({title}){
 
     return subLinkContainer;
 }
+
+function displayFlex(...rest) {
+    rest.forEach(item => item.style.display = 'flex');
+}
+
+function displayNone(...rest) {
+    rest.forEach(item => item.style.display = 'none');
+}
+
+
+
+
+// function mediaQueryListener(media, ...rest) {
+//     const mediaQuery = window.matchMedia(`(max-width:${media}px)`);
+
+//     const windowInnerWidth = window.innerWidth;
+
+//     if (windowInnerWidth < media)  displayFlex(...rest);
+//     else displayNone(...rest);
+
+//     mediaQuery.addEventListener("change", (media) => {
+//         if (media.matches) displayFlex(...rest);
+//         else displayNone(...rest);
+//     });
+// }

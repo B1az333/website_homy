@@ -1,4 +1,10 @@
-#navigation {
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0vw 10% 0vw 10%;
   border-radius: 1vw;
   color: white;
@@ -8,7 +14,7 @@
 }
 
 @media (max-width: 1440px) {
-  #navigation {
+  .navigation {
     display: none;
   }
 }
@@ -25,7 +31,7 @@
   list-style-type: none;
   background-color: #FE6D34;
   border-radius: 1vw;
-  width: 100%;
+  width: auto;
   height: 3.7rem;
 }
 

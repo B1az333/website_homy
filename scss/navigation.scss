@@ -1,4 +1,7 @@
-#navigation{
+.navigation{
+
+    display: flex;
+    justify-content: center;
     
     margin: 0vw 10% 0vw 10%;
     border-radius: 1vw;
@@ -23,7 +26,7 @@
     background-color: #FE6D34;
     border-radius: 1vw;
 
-    width: 100%;
+    width: auto;
 
     height: 3.7rem;
     li{

@@ -43,10 +43,10 @@
   .products__body {
     width: 100%;
   }
-  .products__body:nth-child(3) {
+  .products__body:nth-child(4) {
     display: none;
   }
-  .products__body:nth-child(2) {
+  .products__body:nth-child(3) {
     display: none;
   }
 }
@@ -237,7 +237,7 @@
 }
 
 @media (max-width: 750px) {
-  #buy-now {
+  .buy-now {
     display: none;
   }
 }

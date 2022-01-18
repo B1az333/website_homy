@@ -1,5 +1,5 @@
 @media (max-width: 750px) {
-  #reasons {
+  .reasons {
     display: none;
   }
 }
@@ -77,7 +77,7 @@
   width: 1.5rem;
 }
 
-#reasons li {
+.reasons li {
   padding: 0.5rem;
 }
 /*# sourceMappingURL=reasons.css.map */

@@ -1,4 +1,4 @@
-import {ITEMS} from './config.js';
+import {ITEMS, BASKET} from './config.js';
 import {CURRENCY, CURRENCY_EXCHANGE} from './config.js';
 
 const SECTION_NAME_NEW = 'new-products';
@@ -7,19 +7,19 @@ const SECTION_NAME_SALE = 'sales';
 
 const mediaQueries = [750, 980, 1440];
 
-const bucket = (function () {
-    let countProducts = 0;
-    let priceProducts = 0;
+const bucket = (function (count = 0, price = 0) {
+    let countProducts = count;
+    let priceProducts = price;
 
     updateBucket(countProducts, priceProducts);
-
+    
     return function ({ price, currency }) {
         countProducts++;
         priceProducts += price * CURRENCY_EXCHANGE[currency];
 
         updateBucket(countProducts, priceProducts);
     };
-})();
+})(BASKET.elements, BASKET.price);
 
 let NEW_ITEMS = ITEMS.filter((item) => item.type === 'new' && item.price);
 let RECOMMENDED_ITEMS = ITEMS.filter((item) => item.type === 'recommended' && item.price);

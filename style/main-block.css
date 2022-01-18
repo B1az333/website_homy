@@ -1,4 +1,4 @@
-#main-block {
+.main-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,14 +10,14 @@
 }
 
 @media (max-width: 750px) {
-  #main-block {
+  .main-block {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
 
 @media (max-width: 1440px) {
-  #main-block {
+  .main-block {
     margin: 1rem 2% 0rem 2%;
   }
 }

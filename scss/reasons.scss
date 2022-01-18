@@ -6,7 +6,7 @@ $color_light-red:#F7C7C7;
 $color_green:#16A332;
 $color_light-green:#A4D6B0;
 
-#reasons{
+.reasons{
     @media (max-width:750px) {
         display: none;
     }
@@ -87,7 +87,7 @@ $color_light-green:#A4D6B0;
     }
 }
 
-#reasons{
+.reasons{
     li{
         padding: 0.5rem;
     }
