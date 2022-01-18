@@ -8,7 +8,10 @@ createPromotions(PROMOTIONS);
 function createPromotions(items) {
     const promoContainer = findProductsContainer(SECTION_NAME_PROMO);
 
-    if(items.length === 0) displayNone(promoContainer.parentElement);
+    if(items.length === 0) {
+      displayNone(promoContainer.parentElement);
+      return;
+    }
 
     items.forEach((item) => {
         promoContainer.insertAdjacentHTML('beforeend', createNodePromo(item));

@@ -63,7 +63,10 @@ createProducts(SECTION_NAME_SALE, SALE_ITEMS);
 function createProducts(sectionName, items) {
     const productContainer = findProductsContainer(sectionName);
 
-    if(items.length === 0) displayNone(productContainer.parentElement);//
+    if(items.length === 0){
+        displayNone(productContainer.parentElement);
+        return;
+    }
 
     const outputProducts = items.length > 4 ? items.slice(0, 4) : items;
 
@@ -267,7 +270,6 @@ function mediaQueryListener(media, ...rest) {
 function displayFlex(...rest) {
     rest.forEach(item => item.style.display = 'flex');
 }
-
 
 function displayNone(...rest) {
     rest.forEach(item => item.style.display = 'none');

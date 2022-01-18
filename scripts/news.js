@@ -11,6 +11,8 @@ function createNews(items) {
 
         const sectionBanner = document.querySelector('.banner').parentElement;
         sectionBanner.style.justifyContent='center';
+
+        return;
     }
 
     randomNewItems(items).forEach((item, index)=> {

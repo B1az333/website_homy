@@ -2,18 +2,18 @@ import {MENU} from './config.js';
 
 sliderNav(MENU)
 
-function createNodeNav({title}){
-    const navLi = document.createElement('li');
-    navLi.innerText = title;
-    return navLi;
-}
-
 function sliderNav(items){
+    if(items.length === 0) {
+        const nav = document.querySelector('#navigation');
+        displayNone(nav);
+        return;
+    }
+
     const leftSlider = document.querySelector('.navigation__container').children[0];
     const rightSlider = document.querySelector('.navigation__container').children[1];
 
-    leftSlider.lastChild.style.display='none';
-    if(items.length < 11) rightSlider.lastChild.style.display='none';
+    displayNone(leftSlider.lastChild);
+    if(items.length < 11) displayNone(rightSlider.lastChild);
 
     let leftActive;
     let rightActive;
@@ -23,7 +23,7 @@ function sliderNav(items){
 
         if(index === 0) leftActive = node;
 
-        if(index > 9) node.style.display='none';
+        if(index > 9) displayNone(node);
         else rightActive = node;
 
         rightSlider.before(node);
@@ -31,13 +31,13 @@ function sliderNav(items){
 
     leftSlider.addEventListener('click', () => {
             if(leftSlider !== leftActive.previousElementSibling){
-                rightSlider.lastChild.style.display='block';
-                if(leftSlider === leftActive.previousElementSibling.previousElementSibling) leftSlider.lastChild.style.display='none';
+                displayBlock(rightSlider.lastChild);
+                if(leftSlider === leftActive.previousElementSibling.previousElementSibling) displayNone(leftSlider.lastChild);
 
                 leftActive = leftActive.previousElementSibling;
-                leftActive.style.display='block';
+                displayBlock(leftActive);
 
-                rightActive.style.display='none';
+                displayNone(rightActive);
                 rightActive = rightActive.previousElementSibling;
             }
             else leftSlider.lastChild.style.display='none';
@@ -45,15 +45,29 @@ function sliderNav(items){
 
     rightSlider.addEventListener('click', () => {
         if(rightSlider !== rightActive.nextElementSibling){
-            leftSlider.lastChild.style.display='block';
-            if(rightSlider === rightActive.nextElementSibling.nextElementSibling) rightSlider.lastChild.style.display='none';
+            displayBlock(leftSlider.lastChild);
+            if(rightSlider === rightActive.nextElementSibling.nextElementSibling) displayNone(rightSlider.lastChild);
         
             rightActive = rightActive.nextElementSibling;
-            rightActive.style.display='block';
+            displayBlock(rightActive);
         
-            leftActive.style.display='none';
+            displayNone(leftActive);
             leftActive = leftActive.nextElementSibling;
         }
         else rightSlider.lastChild.style.display='none';
     });
+}
+
+function createNodeNav({title}){
+    const navLi = document.createElement('li');
+    navLi.innerText = title;
+    return navLi;
+}
+
+function displayBlock(...rest) {
+    rest.forEach(item => item.style.display = 'block');
+}
+
+function displayNone(...rest) {
+    rest.forEach(item => item.style.display = 'none');
 }

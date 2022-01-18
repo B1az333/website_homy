@@ -11,7 +11,10 @@ createBuyNow(BUYING_RIGHT_NOW);
 function createBuyNow(items){
     const buyNowContainer = document.querySelector(".buy-now__container");
 
-    if(items.length === 0) displayNone(buyNowContainer.parentElement);
+    if(items.length === 0) {
+        displayNone(buyNowContainer.parentElement);
+        return;
+    }
 
     const maxLenght = (items.length < 4) ? items.length : 4;
 

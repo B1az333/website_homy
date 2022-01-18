@@ -10,6 +10,8 @@ function createCaruselSlider(items){
 
         const news = document.querySelector('.company-news');
         news.style.width = '100%';
+
+        return;
     }
 
     createBanner(items);
