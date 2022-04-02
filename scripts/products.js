@@ -114,7 +114,7 @@ function createNodeProduct({ type, description, img, price, oldPrice, currency }
         <div class="bookmark__container">${pimp}</div>
     
         <figure class="products__image">
-            <img src="${img ? img : ''}"
+            <img src="${img ? img : 'https://i.postimg.cc/W1szb08b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg'}"
                 alt="image">
             <figcaption class="products__text"><a href="#">${description}</a></figcaption>
         </figure>
